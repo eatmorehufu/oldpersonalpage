@@ -8,20 +8,45 @@
         padding: 0px;
         margin: 0px;
         background: black;
+        color: white;
+        font-family: sans-serif;
       }
       canvas {
         background: white;
         display: block;
         width: 800px;
         /*height: 800px;*/
-        margin: auto;
+        margin: 50px;
+        float: left;
+      }
+      h1 {
+        color: white;
+        display: block;
+        margin: 50px;
+      }
+
+      ul {
+        float: left;
+        list-style: none;
+      }
+
+      li {
+        padding: 10px;
       }
 
     </style>
+
+    <h1>Asteroids</h1>
   </head>
 
   <body>
+
     <canvas id="game-canvas"></canvas>
+    <ul>
+    <li>Controls:</li>
+    <li>WASD to shoot</li>
+    <li>Arrow keys to move</li>
+    </ul>
 
     <script src="lib/movingObject.js"></script>
     <script src="lib/game.js"></script>
