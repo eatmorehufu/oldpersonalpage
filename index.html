@@ -55,7 +55,6 @@
     <li>WASD to move.</li>
     <li>Arrow keys to shoot.</li>
     </ul>
-    <img id="meteor" src="assets/rock_m1.png" width=48 height=51>
     <script src="lib/movingObject.js"></script>
     <script src="lib/game.js"></script>
     <script src="lib/gameView.js"></script>
@@ -69,8 +68,7 @@
       canvasEl.height = window.innerHeight;
       canvasEl.width = window.innerWidth;
       var ctx = canvasEl.getContext("2d");
-      var meteor = document.getElementById("meteor");
-      new Asteroids.GameView(ctx, canvasEl, meteor).start();
+      new Asteroids.GameView(ctx, canvasEl).start();
     </script>
     <footer>Game by Dean Hu. Sprites by Bobby Frye.<footer>
   </body>
