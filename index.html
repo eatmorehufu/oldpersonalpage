@@ -12,7 +12,7 @@
         font-family: sans-serif;
       }
       canvas {
-        background: white;
+        background: gray;
         display: block;
         width: 800px;
         height: 400px;
@@ -34,6 +34,10 @@
         padding: 10px;
       }
 
+      img{
+        display: none;
+      }
+
     </style>
 
     <h1>Asteroids</h1>
@@ -47,7 +51,7 @@
     <li>WASD to shoot</li>
     <li>Arrow keys to move</li>
     </ul>
-
+    <img id="meteor" src="assets/rock_m1.png" width=48 height=51>
     <script src="lib/movingObject.js"></script>
     <script src="lib/game.js"></script>
     <script src="lib/gameView.js"></script>
@@ -61,7 +65,8 @@
       canvasEl.height = window.innerHeight;
       canvasEl.width = window.innerWidth;
       var ctx = canvasEl.getContext("2d");
-      new Asteroids.GameView(ctx, canvasEl).start();
+      var meteor = document.getElementById("meteor");
+      new Asteroids.GameView(ctx, meteor).start();
     </script>
   </body>
 </html>
