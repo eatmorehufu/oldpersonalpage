@@ -48,8 +48,10 @@ Game.prototype.render = function(ctx){
   this.step();
   this.draw(ctx);
   this.drawDisplays(ctx);
-  this.getMovement();
-  this.getShooting();
+  if (!this.ship.frozen) {
+    this.getMovement();
+    this.getShooting();
+  };
   this.addFriction();
 };
 
@@ -156,6 +158,7 @@ Game.prototype.checkCollisions = function() {
             if (!asteroid.hasCollided) {
               asteroid.hasCollided = true;
               asteroid.vel = Asteroids.Util.randomVec();
+              asteroid.magnitude = Asteroids.Util.setRandomMag(asteroid.radius);
               window.setTimeout(function(){
                 asteroid.hasCollided = false;
               }, 2000);
@@ -194,7 +197,7 @@ Game.prototype.remove = function(obj) {
           radius: obj.radius / 2,
           game: obj.game,
           vel: Asteroids.Util.randomVec(),
-          magnitude: 4
+          magnitude: Asteroids.Util.setRandomMag(obj.radius / 2)
         }));
       };
     };

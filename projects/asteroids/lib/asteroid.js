@@ -10,7 +10,7 @@ var Asteroid = Asteroids.Asteroid = function(options) {
     radius: options.radius || Asteroid.RADIUS,
     pos: options.pos,
     vel: Asteroids.Util.randomVec(),
-    magnitude: options.magnitude || 2
+    magnitude: options.magnitude || Asteroids.Util.setRandomMag(Asteroid.RADIUS)
   });
 };
 
@@ -34,7 +34,7 @@ Asteroid.METEORS = [];
 
 Asteroids.Util.inherits(Asteroids.Asteroid, Asteroids.MovingObject);
 
-Asteroids.Asteroid.prototype.draw = function(ctx) {
+Asteroid.prototype.draw = function(ctx) {
   if (this.radius === 40) {
     ctx.drawImage(Asteroid.METEORS[0], 0 ,0, 99, 75, this.pos[0] - this.radius, this.pos[1] - this.radius, this.radius * 2, this.radius * 2);
   } else if (this.radius === 20) {
@@ -43,5 +43,6 @@ Asteroids.Asteroid.prototype.draw = function(ctx) {
     ctx.drawImage(Asteroid.METEORS[Math.floor(Math.random() * 3 + 3)], 0 ,0, 24, 27, this.pos[0] - this.radius, this.pos[1] - this.radius, this.radius * 2, this.radius * 2);
   };
 }
+
 
 })();

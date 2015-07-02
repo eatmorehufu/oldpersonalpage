@@ -5,6 +5,7 @@
 
 var Ship = Asteroids.Ship = function(obj){
   this.shields = 100;
+  this.frozen = false;
   Asteroids.MovingObject.call(this, {
     game: obj.game,
     color: Ship.COLOR,
@@ -57,12 +58,16 @@ Ship.prototype.draw = function (ctx) {
 
 Ship.prototype.ricochet = function() {
   var ship = this;
+  this.frozen = true;
   this.invincible = true;
   this.vel = Asteroids.Util.randomVec();
-  this.magnitude = 7;
+  this.magnitude = 12;
   window.setTimeout(function() {
     ship.invincible = false;
   }, 2000);
+  window.setTimeout(function() {
+    ship.frozen = false;
+  }, 250);
 }
 
 // Ship.prototype.draw = function () {

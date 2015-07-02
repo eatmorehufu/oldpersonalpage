@@ -14,16 +14,23 @@ util.inherits = function(ChildClass, ParentClass) {
 util.randomVec = function() {
   var x = Math.random()*2 - 1;
   var y = Math.random()*2 - 1;
-  return [x, y];
+
+  return util.normalizeVec([x, y]);
 };
 
-// util.maxSpeed = function(speedX, speedY) {
-//   var speedLimit = 7;
-//   if ((speedLimit * speedLimit) < ((speedX * speedX) + (speedY * speedY))) {
-//     return this.maxSpeed(speedX * 0.9, speedY * 0.9);
-//   };
-//   return [speedX, speedY];
-// };
+util.randomMag = function(maxSpeed, minSpeed) {
+  return Math.random() * (maxSpeed - minSpeed) + minSpeed;
+}
+
+util.setRandomMag = function(radius) {
+  if (radius === 40) {
+    return util.randomMag(3, 1);
+  } else if (radius === 20) {
+    return util.randomMag(4, 2);
+  } else {
+    return util.randomMag(6, 4);
+  }
+};
 
 util.normalizeVec = function(vecArray) {
   var x = vecArray[0];
