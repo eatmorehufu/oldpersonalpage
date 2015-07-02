@@ -53,3 +53,9 @@ main {
   margin: auto;
   width: 1200px;
 }
+
+main:after {
+  content: "";
+  display: block;
+  clear:both;
+}
