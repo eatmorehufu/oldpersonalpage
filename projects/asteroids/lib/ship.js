@@ -10,7 +10,7 @@ var Ship = Asteroids.Ship = function(obj){
     game: obj.game,
     color: Ship.COLOR,
     radius: Ship.RADIUS,
-    pos: obj.game.randomPosition(),
+    pos: [obj.game.DIM_X / 2, obj.game.DIM_Y/ 2],
     vel: Ship.VEL,
     magnitude: 0
   });
@@ -27,9 +27,10 @@ Asteroids.Util.inherits(Asteroids.Ship, Asteroids.MovingObject);
 
 Ship.prototype.respawn = function () {
   var ship = this;
+  this.frozen = false;
   this.invincible = true;
   this.vel = [0,0];
-  this.pos = this.game.randomPosition();
+  this.pos = [this.game.DIM_X / 2, this.game.DIM_Y/ 2];
   window.setTimeout(function() {
     ship.invincible = false;
   }, 2000);

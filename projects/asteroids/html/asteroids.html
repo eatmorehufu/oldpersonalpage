@@ -12,8 +12,9 @@
       <canvas id="game-canvas"></canvas>
       <ul>
       <li>Controls:</li>
-      <li>WASD to move.</li>
+      <li>W A S D to move.</li>
       <li>Arrow keys to shoot.</li>
+      <li>'P' to respawn.</li>
       <li>White means invul.</li>
       </ul>
       <script src="../lib/movingObject.js"></script>
@@ -27,12 +28,15 @@
       <script src="../lib/HuD.js"></script>
       <script src="../lib/levelUp.js"></script>
       <script src="../lib/game.js"></script>
+      <script src="../lib/jquery-2.1.1.js"></script>
       <script>
-        var canvasEl = document.getElementsByTagName("canvas")[0];
-        canvasEl.height = 400;
-        canvasEl.width = 800;
-        var ctx = canvasEl.getContext("2d");
-        new Asteroids.GameView(ctx, canvasEl).start();
+        $(function() {
+          var canvasEl = document.getElementsByTagName("canvas")[0];
+          canvasEl.height = 400;
+          canvasEl.width = 800;
+          var ctx = canvasEl.getContext("2d");
+          new Asteroids.GameView(ctx, canvasEl).start();
+        });
       </script>
     </main>
     <footer>Game by Dean Hu. Sprites by Bobby Frye.<footer>

@@ -28,7 +28,7 @@ util.setRandomMag = function(radius) {
   } else if (radius === 20) {
     return util.randomMag(4, 2);
   } else {
-    return util.randomMag(6, 4);
+    return util.randomMag(6, 2);
   }
 };
 

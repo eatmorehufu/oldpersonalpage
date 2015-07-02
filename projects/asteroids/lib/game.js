@@ -139,9 +139,9 @@ Game.prototype.checkCollisions = function() {
         ) {
           this.ship.shields -= 20;
           if (this.ship.shields <= 0) {
-            this.ship.shields = 100;
-            this.restart(4);
-            this.ship.respawn();
+            this.isOver = true;
+            this.ship.frozen = true;
+            this.ship.invincible = true;
           } else {
             this.ship.ricochet();
           };
@@ -207,12 +207,12 @@ Game.prototype.remove = function(obj) {
     game.bullets.splice(game.bullets.indexOf(obj), 1);
   };
   if (game.asteroids.length === 0) {
-    if (!game.restartTimer) {
+    if (!game.newWaveTimer) {
       window.setTimeout(function() {
         game.levelup();
       }, 1500);
     };
-    game.restartTimer = true;
+    game.newWaveTimer = true;
   };
 };
 
@@ -223,17 +223,23 @@ Game.prototype.allObjects = function() {
 Game.prototype.levelup = function() {
   var ship = this.ship;
   ship.invincible = true;
-  this.restartTimer = false;
-  this.restart(this.NUM_ASTEROIDS + 1);
+  this.newWaveTimer = false;
+  this.newWave(this.NUM_ASTEROIDS + 1);
   window.setTimeout(function() {
     ship.invincible = false;
   }, 2000);
 };
 
-Game.prototype.restart = function(level) {
+Game.prototype.newWave = function(level) {
   this.NUM_ASTEROIDS = level;
   this.addAsteroids();
 }
+
+Game.prototype.restart = function (){
+  this.ship.shields = 100;
+  this.newWave(4);
+  this.ship.respawn();
+};
 
 
 })();
