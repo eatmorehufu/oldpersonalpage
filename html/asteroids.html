@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Asteroids</title>
+
+    <style>
+      html, body, canvas {
+        padding: 0px;
+        margin: 0px;
+        background: black;
+        color: white;
+        font-family: sans-serif;
+      }
+      canvas {
+        background: #000;
+        display: block;
+        width: 800px;
+        height: 400px;
+        float: left;
+        box-shadow: -4px 0 0px 0px #fff,
+          4px 0 0px 0px #aaa,
+          0 4px 0px 0px #aaa,
+          0 -4px 0px 0px #fff;
+      }
+      h1 {
+        color: white;
+        display: block;
+        margin: 50px;
+      }
+
+      ul {
+        list-style: none;
+        display: block;
+        float: right;
+        box-shadow: -4px 0 0px 0px #fff,
+          4px 0 0px 0px #aaa,
+          0 4px 0px 0px #aaa,
+          0 -4px 0px 0px #fff;
+      }
+
+      li {
+        padding: 10px;
+      }
+
+      img{
+        display: none;
+      }
+
+      footer {
+        font-size: 10px;
+        display:block;
+        clear: both;
+        padding-top: 50px;
+        padding-left: 50px;
+      }
+
+      main {
+        margin: auto;
+        width: 1200px;
+      }
+
+    </style>
+
+    <h1>Asteroids</h1>
+  </head>
+
+  <body>
+    <main>
+      <canvas id="game-canvas"></canvas>
+      <ul>
+      <li>Controls:</li>
+      <li>WASD to move.</li>
+      <li>Arrow keys to shoot.</li>
+      <li>2 second invul after last impact.</li>
+      </ul>
+      <script src="../lib/movingObject.js"></script>
+      <script src="../lib/gameView.js"></script>
+      <script src="../lib/util.js"></script>
+      <script src="../lib/ship.js"></script>
+      <script src="../lib/asteroid.js"></script>
+      <script src="../lib/bullet.js"></script>
+      <script src="../lib/keymaster.js"></script>
+      <script src="../lib/displays.js"></script>
+      <script src="../lib/HuD.js"></script>
+      <script src="../lib/levelUp.js"></script>
+      <script src="../lib/game.js"></script>
+      <script>
+        var canvasEl = document.getElementsByTagName("canvas")[0];
+        canvasEl.height = 400;
+        canvasEl.width = 800;
+        var ctx = canvasEl.getContext("2d");
+        new Asteroids.GameView(ctx, canvasEl).start();
+      </script>
+    </main>
+    <footer>Game by Dean Hu. Sprites by Bobby Frye.<footer>
+  </body>
+</html>
