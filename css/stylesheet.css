@@ -1,6 +1,7 @@
 /* CSS Resets and utilities */
 html, body, h1, h2, a, header,
-ul, li, section, main, h3, p {
+ul, li, section, main, h3, p,
+figure {
   margin: 0;
   padding: 0;
   border: 0;
@@ -12,6 +13,11 @@ ul, li, section, main, h3, p {
 
 ul {
   list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 .group:after {
@@ -122,4 +128,80 @@ section {
   color: #ddd;
   text-align: center;
   padding: 150px;
+}
+
+#about p {
+  width: 600px;
+  margin: auto;
+  font-family: 'Lato'
+}
+
+#about h1 {
+  font-size: 50px;
+  font-family: 'Merriweather';
+  padding-bottom: 20px;
+}
+
+/* Skills section style */
+#skills {
+  background: #3B3738;
+  color: #ddd;
+}
+
+.skills-list {
+  margin: auto;
+  width: 560px;
+}
+
+.skills-list li {
+  float: left;
+  padding: 25px 20px 0px 20px;
+}
+
+#skills h1 {
+  font-family: 'Merriweather';
+  font-size: 50px;
+  padding: 20px;
+}
+.skills-list h3 {
+  font-family: 'Lato';
+  font-weight: 300;
+}
+
+/* Projects section style */
+#projects {
+  background: #444;
+  color: #ddd;
+}
+
+#projects h1 {
+  font-family: 'Merriweather';
+  font-size: 50px;
+  padding: 20px;
+}
+
+.projects-list {
+  width: 600px;
+  margin: auto;
+}
+
+.project {
+  margin: 30px;
+}
+
+.project > figure {
+  float: left;
+}
+
+.project > a {
+  float: right;
+}
+
+.project > p {
+  float: right;
+}
+
+/* Contact section style */
+#contact {
+  background: #F6F6F6;
 }
