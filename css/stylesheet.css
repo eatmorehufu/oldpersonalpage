@@ -133,7 +133,9 @@ section {
 #about p {
   width: 600px;
   margin: auto;
-  font-family: 'Lato'
+  font-family: 'Lato';
+  font-weight: 300;
+  text-align: left;
 }
 
 #about h1 {
@@ -181,24 +183,45 @@ section {
 }
 
 .projects-list {
-  width: 600px;
+  width: 800px;
   margin: auto;
 }
 
 .project {
   margin: 30px;
+  font-family: 'Lato';
+  font-weight: 300;
 }
 
 .project > figure {
   float: left;
 }
 
-.project > a {
+.project-desc {
+  padding: 0px 20px;
   float: right;
+  width: 400px;
+}
+.project-desc > ul {
+  padding: 20px;
+  text-align: left;
 }
 
-.project > p {
-  float: right;
+.project h2 {
+  font-size: 20px;
+  text-align: left;
+}
+
+.project a {
+  display: block;
+  float: right
+}
+
+.project-desc p {
+}
+
+.project-desc > p {
+
 }
 
 /* Contact section style */
