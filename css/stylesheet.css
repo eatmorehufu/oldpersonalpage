@@ -123,14 +123,14 @@ section {
 
 
 /* About section style */
-#about {
+section#about {
   background: #666;
   color: #ddd;
   text-align: center;
   padding: 150px;
 }
 
-#about p {
+section#about p {
   width: 600px;
   margin: auto;
   font-family: 'Lato';
@@ -138,14 +138,14 @@ section {
   text-align: left;
 }
 
-#about h1 {
+section#about h1 {
   font-size: 50px;
   font-family: 'Merriweather';
   padding-bottom: 20px;
 }
 
 /* Skills section style */
-#skills {
+section#skills {
   background: #3B3738;
   color: #ddd;
 }
@@ -160,7 +160,7 @@ section {
   padding: 25px 20px 0px 20px;
 }
 
-#skills h1 {
+section#skills h1 {
   font-family: 'Merriweather';
   font-size: 50px;
   padding: 20px;
@@ -171,12 +171,12 @@ section {
 }
 
 /* Projects section style */
-#projects {
+section#projects {
   background: #444;
   color: #ddd;
 }
 
-#projects h1 {
+section#projects h1 {
   font-family: 'Merriweather';
   font-size: 50px;
   padding: 20px;
@@ -234,6 +234,6 @@ section {
 }
 
 /* Contact section style */
-#contact {
+section#contact {
   background: #F6F6F6;
 }
