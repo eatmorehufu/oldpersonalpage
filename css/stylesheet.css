@@ -16,8 +16,7 @@ ul {
 }
 
 img {
-  width: 100%;
-  height: auto;
+  display: block;
 }
 
 .group:after {
@@ -141,6 +140,18 @@ section#about h1 {
   font-size: 50px;
   font-family: 'Merriweather';
   padding-bottom: 20px;
+}
+
+section#about img{
+
+}
+
+section#about figure{
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
 }
 
 /* Skills section style */
