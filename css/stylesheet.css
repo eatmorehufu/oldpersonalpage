@@ -143,7 +143,8 @@ section#about h1 {
 }
 
 section#about img{
-
+  width: 230px;
+  height: auto;
 }
 
 section#about figure{
@@ -156,18 +157,26 @@ section#about figure{
 
 /* Skills section style */
 section#skills {
-  background: #3B3738;
-  color: #ddd;
+  background: #ddd;
+  color: #444;
 }
 
 .skills-list {
   margin: auto;
-  width: 560px;
+  width: 700px;
+  margin-bottom: 50px;
 }
 
 .skills-list li {
   float: left;
   padding: 25px 20px 0px 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.skills-list img {
+  width: 100%;
+  height: auto;
 }
 
 section#skills h1 {
@@ -182,7 +191,7 @@ section#skills h1 {
 
 /* Projects section style */
 section#projects {
-  background: #444;
+  background: #222;
   color: #ddd;
 }
 
@@ -221,6 +230,7 @@ section#projects h1 {
   padding: 20px;
   text-align: left;
   font-size: 15px;
+  text-indent: -1em;
 }
 
 .project h2 {
@@ -232,13 +242,6 @@ section#projects h1 {
   font-size: 15px;
   font-style: italic;
   text-align: left;
-}
-
-.project-desc p {
-}
-
-.project-desc > p {
-
 }
 
 .project-links {
