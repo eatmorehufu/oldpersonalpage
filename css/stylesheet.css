@@ -74,9 +74,14 @@ section {
 /* Intro pane style */
 
 #intro {
-  background: #333;
+  background-image: url('../images/me.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
   font-family: 'Lato';
-  height: 400px;
+  height: 600px;
   padding: 150px;
 }
 
