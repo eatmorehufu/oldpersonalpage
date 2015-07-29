@@ -1,83 +1,142 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>The New Adventures of Dean Hu</title>
-  <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-  <meta charset="utf-8">
-	<style>
-  /* Resets */
-  html, body, h1, h2, a, li, ul {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    text-decoration: inherit;
-    text-align: inherit;
-  }
 
-  ul {
-    list-style: none;
-  }
-  /* Temp Styles*/
-  body {
-    padding: 50px;
-    color: black;
-    font-family: 'Lato';
-    background: lightgray;
-    font-size: 50px;
-  }
+  <head>
+    <title>Dean Hu</title>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900,900italic,300italic|PT+Mono|Merriweather' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+  	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <script src="./js/jquery-1.11.3.js"></script>
+    <script src="./js/navigation.js"></script>
+  </head>
 
-  ul {
-    border-left: 2px solid gray;
-    border-top: 2px solid gray;
-    border-bottom: 2px solid gray;
-    float: left;
-  }
+  <body>
 
-  ul:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
+    <header class="nav-bar group">
+      <div class="logo">
+        <a href="#intro">Placeholder Logo</a>
+      </div>
+      <ul class="nav-list group">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+  <section id="intro" class="group">
+    <main class="center-logo group">
+      <h1>D</h1>
+      <h2>E</h2>
+      <h2>A</h2>
+      <h2>N</h2>
+    </main>
+    <h3>Web Developer</h3>
+  </section>
+  <section id="about" class="group">
+    <h1>About Me</h1>
+    <figure>
+      <img src="./images/profile.png">
+    </figure>
+    <p>
+      I love solving problems. Ever since I was little I loved solving problems.
+      Back then it was word riddles and math puzzle, but over time the problems
+      grew in intricacy and complexity. I've studied a breadth of fields
+      throughout my education in some depth.
+    </p>
+    <p>
 
-  li {
-    display: block;
-    float: left;
-    border-right: 2px solid gray;
-    background: darkgray;
-  }
+    </p>
+  </section>
+  <section id="skills" class="group">
+    <h1>Skills and Technologies</h1>
+    <ul class="skills-list group">
+      <li><img src="http://placecorgi.com/100/100"><h3>Ruby</h3></li>
+      <li><img src="http://placecorgi.com/100/100"><h3>Rails</h3></li>
+      <li><img src="http://placecorgi.com/100/100"><h3>Javascript</h3></li>
+      <li><img src="http://placecorgi.com/100/100"><h3>Backbone</h3></li>
+    </ul>
+    <ul class="skills-list group">
+      <li><img src="http://placecorgi.com/100/100"><h3>jQuery</h3></li>
+      <li><img src="http://placecorgi.com/100/100"><h3>PostgreSQL</h3></li>
+      <li><img src="http://placecorgi.com/100/100"><h3>HTML5</h3></li>
+      <li><img src="http://placecorgi.com/100/100"><h3>CSS3</h3></li>
+    </ul>
+  </section>
+  <section id="projects" class="group">
+    <h1>Projects</h1>
+    <ul class="projects-list">
+      <li class="project group rendez-zoo">
+        <figure><img src="./images/rendez-zoo.png">
+          <div class="project-links">
+            <a href="http://www.rendez-zoo.co">Live</a>
+            <a href="http://www.github.com/eatmorehufu/rendez-zoo">Github</a>
+          </div>
+        </figure>
+        <div class="project-desc group">
+          <h2>Rendez-Zoo</h2>
+          <h3>An animal-themed group and event hub inspired by Meetup.com</h3>
+          <ul>
+            <li>Bullet Point 1</li>
+            <li>Bullet Point 2</li>
+            <li>Bullet Point 3</li>
+            <li>Bullet Point 4</li>
+            <li>Bullet Point 5</li>
+          </ul>
+        </div>
+      </li>
+      <li class="project group asteroids">
+        <figure><img src="./images/asteroids.png">
+          <div class="project-links">
+            <a href="http://eatmorehufu.github.io/asteroids">Play</a>
+            <a href="http://www.github.com/eatmorehufu/asteroids">Github</a>
+          </div>
+        </figure>
+        <div class="project-desc group">
+          <h2>Asteroids</h2>
+          <h3>Italicized description</h3>
+          <ul>
+            <li>Bullet Point 1</li>
+            <li>Bullet Point 2</li>
+            <li>Bullet Point 3</li>
+            <li>Bullet Point 4</li>
+            <li>Bullet Point 5</li>
+          </ul>
+        </div>
+      </li>
+      <li class="project group snake">
+        <figure><img src="./images/snake.png">
+          <div class="project-links">
+            <a href="http://eatmorehufu.github.io/snake">Play</a>
+            <a href="http://www.github.com/eatmorehufu/snake">Github</a>
+          </div></figure>
+        <div class="project-desc group">
+          <h2>Snake</h2>
+          <h3>Italicized description</h3>
+          <ul>
+            <li>Bullet Point 1</li>
+            <li>Bullet Point 2</li>
+            <li>Bullet Point 3</li>
+            <li>Bullet Point 4</li>
+            <li>Bullet Point 5</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </section>
+  <section id="contact" class="group">
+    Reach me through these!:
+  </section>
 
-  li > a{
-    display: block;
-    padding: 20px;
-  }
 
-  li > a:hover{
-    background: black;
-    color: white;
-  }
 
-  h2 {
-    padding-top: 20px;
-    font-size: 30px;
-    clear: both;
-    margin: 20px;
-  }
 
-  footer {
-    font-size: 20px;
-  }
+  </body>
+  <script>
+    $(function() {
+      new Navigation.NavBar($(".nav-bar"));
+    })
 
-  </style>
-</head>
-<body>
-  <h1>Page Under Construction</h1>
-  <h2>But in the meantime, here are some games:</h2>
-  <ul>
-    <li><a href="http://eatmorehufu.github.io/asteroids">Asteroids</a></li>
-    <li><a href="http://eatmorehufu.github.io/snake">Snake</a></li>
-  </ul>
-  <h2>They're under development too.</h2>
-  <footer>© 2015 Dean Hu</footer>
-</body>
+  </script>
+
+
 </html>
