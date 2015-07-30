@@ -120,11 +120,13 @@ section#about {
 }
 
 section#about p {
-  width: 600px;
+  width: 450px;
   margin: auto;
   font-family: 'Lato';
   font-weight: 300;
   text-align: left;
+  margin-bottom: 20px;
+  line-height: 1.4em;
 }
 
 section#about h1 {
