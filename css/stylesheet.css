@@ -38,6 +38,12 @@ section {
   text-align: center;
 }
 
+section > h1 {
+  font-size: 50px;
+  font-family: 'Merriweather';
+  padding-bottom: 20px;
+}
+
 /* Navigation Bar */
 
 .nav-bar {
@@ -108,6 +114,7 @@ section {
 #intro h1 {
   top: 350px;
   font-size: 36px;
+  padding: none;
 }
 
 
@@ -130,8 +137,6 @@ section#about p {
 }
 
 section#about h1 {
-  font-size: 50px;
-  font-family: 'Merriweather';
   padding-bottom: 20px;
 }
 
@@ -172,11 +177,6 @@ section#skills {
   height: auto;
 }
 
-section#skills h1 {
-  font-family: 'Merriweather';
-  font-size: 50px;
-  padding: 20px;
-}
 .skills-list h3 {
   font-family: 'Lato';
   font-weight: 300;
@@ -186,12 +186,6 @@ section#skills h1 {
 section#projects {
   background: #222;
   color: #ddd;
-}
-
-section#projects h1 {
-  font-family: 'Merriweather';
-  font-size: 50px;
-  padding: 20px;
 }
 
 .projects-list {
@@ -282,4 +276,23 @@ section#projects h1 {
 /* Contact section style */
 section#contact {
   background: #F6F6F6;
+}
+
+section#contact i {
+  font-size: 100px;
+  transition: color 0.2s;
+}
+
+section#contact i:hover{
+  color: #999;
+}
+
+.contact-list {
+  margin: auto;
+  width: 420px;
+}
+
+.contact-list li {
+  float: left;
+  margin: 20px;
 }
