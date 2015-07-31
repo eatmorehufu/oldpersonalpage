@@ -15,16 +15,14 @@
   NavBar.prototype.scrollTo = function (event) {
     event.preventDefault();
     var id = $(event.currentTarget).attr('href');
-
     var $id = $(id);
     if ($id.length === 0){
       return;
     }
 
     var pos = $(id).offset().top;
-    
+
     $('body, html').animate({ scrollTop: pos });
   }
-
 
 })();

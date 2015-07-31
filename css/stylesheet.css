@@ -48,13 +48,23 @@ section > h1 {
 
 .nav-bar {
   position: fixed;
-  background: #333;
+  background: rgba(3, 3, 3, 0.7);
   margin: auto;
   width: 100%;
   top: 0px;
   z-index: 3;
   color: #ccc;
   font-family: 'Lato';
+  border-bottom: 1px solid #000;
+  transition: background 0.5s border 0.5s ease-out;
+  -webkit-transition : border 500ms ease-out;
+   -moz-transition : border 500ms ease-out;
+   -o-transition : border 500ms ease-out;
+}
+
+.nav-bar.opaque{
+  background: rgba(3, 3, 3, 1);
+  border-bottom: 1px solid #fff;
 }
 
 .nav-menu {
@@ -62,22 +72,20 @@ section > h1 {
   margin: auto;
 }
 
-.nav-bar a, .nav-bar button {
+.nav-bar a {
   display: block;
   padding: 10px;
+  margin: 0px 78px;
+  transition: color 0.3s;
 }
 
-.nav-bar button{
-  float: left;
-}
-
-.nav-bar a:hover, .nav-bar button:hover {
+.nav-bar a:hover {
   color: #999;
   cursor: pointer;
 }
 
 .nav-list {
-  float: right;
+  float: left;
 }
 
 .nav-list li {
@@ -285,7 +293,7 @@ section#contact i {
 }
 
 section#contact i:hover{
-  color: #999;
+  color: #555;
 }
 
 .contact-list {
@@ -296,4 +304,10 @@ section#contact i:hover{
 .contact-list li {
   float: left;
   margin: 20px;
+}
+
+#contact > h2 {
+  padding: 20px;
+  font-size: 24px;
+  font-family: 'Merriweather';
 }
