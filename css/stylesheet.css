@@ -1,7 +1,7 @@
 /* CSS Resets and utilities */
 html, body, h1, h2, a, header,
-ul, li, section, main, h3, p,
-figure, button {
+ul, li, section, article, main, h3, p,
+figure, button, div {
   margin: 0;
   padding: 0;
   border: 0;
@@ -27,287 +27,83 @@ img {
   clear: both;
 }
 /* General styles */
+
 body {
-  background: #222;
+  background:
+  radial-gradient(black 15%, transparent 16%) 0 0,
+  radial-gradient(black 15%, transparent 16%) 8px 8px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+  radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+  background-color:#282828;
+  background-size:16px 16px;
 }
 
-section {
-  margin: auto;
-  position: relative;
-  padding: 100px;
-  text-align: center;
-}
-
-section > h1 {
-  font-size: 50px;
-  font-family: 'Merriweather';
-  padding-bottom: 20px;
-}
-
-/* Navigation Bar */
-
-.nav-bar {
-  position: fixed;
-  background: rgba(3, 3, 3, 0.7);
-  margin: auto;
-  width: 100%;
-  top: 0px;
-  z-index: 3;
-  color: #ccc;
-  font-family: 'Lato';
-  border-bottom: 1px solid #000;
-  transition: background 0.5s border 0.5s ease-out;
-  -webkit-transition : border 500ms ease-out;
-   -moz-transition : border 500ms ease-out;
-   -o-transition : border 500ms ease-out;
-}
-
-.nav-bar.opaque{
-  background: rgba(3, 3, 3, 1);
-  border-bottom: 1px solid #fff;
-}
-
-.nav-menu {
-  width: 900px;
-  margin: auto;
-}
-
-.nav-bar a {
-  display: block;
-  padding: 10px;
-  margin: 0px 78px;
-  transition: color 0.3s;
-}
-
-.nav-bar a:hover {
-  color: #999;
-  cursor: pointer;
-}
-
-.nav-list {
-  float: left;
-}
-
-.nav-list li {
-  float: left;
-}
-
-/* Intro pane style */
-
-#intro {
-  background: url('../images/me.jpg') no-repeat;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-  font-family: 'Lato';
-  height: 500px;
-  padding: 150px;
-  position: relative;
-}
-
-
-#intro h3, #intro h1 {
-  position: absolute;
-  color: #fff;
-  font-family: 'Merriweather';
-  text-shadow: 2px 0px 0px #000;
-}
-
-#intro h3 {
-  top: 400px;
-  font-size: 20px;
-}
-
-#intro h1 {
-  top: 350px;
-  font-size: 36px;
-  padding: none;
-}
-
-
-/* About section style */
-section#about {
-  background: #3e3e3e;
-  color: #ddd;
-  text-align: center;
-  padding: 150px;
-}
-
-section#about p {
-  width: 450px;
-  margin: auto;
-  font-family: 'Lato';
-  font-weight: 300;
-  text-align: left;
-  margin-bottom: 20px;
-  line-height: 1.4em;
-}
-
-section#about h1 {
-  padding-bottom: 20px;
-}
-
-section#about img{
-  width: 230px;
-  height: auto;
-}
-
-section#about figure{
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: auto;
-}
-
-/* Skills section style */
-section#skills {
-  background: #ddd;
-  color: #444;
-}
-
-.skills-list {
-  margin: auto;
-  width: 700px;
-  margin-bottom: 50px;
-}
-
-.skills-list li {
-  float: left;
-  padding: 25px 20px 0px 20px;
-  width: 100px;
-  height: 100px;
-}
-
-.skills-list img {
-  width: 100%;
-  height: auto;
-}
-
-.skills-list h3 {
-  font-family: 'Lato';
-  font-weight: 300;
-}
-
-/* Projects section style */
-section#projects {
-  background: #222;
-  color: #ddd;
-}
-
-.projects-list {
-  width: 800px;
-  margin: auto;
-}
-
-.project {
-  padding: 30px;
-  margin-bottom: 20px;
-  font-family: 'Lato';
-  font-weight: 300;
-  border: 1px solid #eee
-}
-
-.project > figure {
-  position: relative;
-  float: left;
-  width: 300px;
-  height: 200px;
-}
-
-.project-desc {
-  padding: 0px 20px;
-  float: right;
-  width: 398px;
-}
-.project-desc > ul {
-  padding: 20px;
-  text-align: left;
-  font-size: 15px;
-  text-indent: -1em;
-}
-
-.project h2 {
+h1 {
   font-size: 30px;
-  font-weight: 300;
-  text-align: left;
 }
 
-.project h3 {
-  font-size: 15px;
-  font-style: italic;
-  text-align: left;
+h2 {
+  font-size: 25px;
 }
 
-.project-links {
-  position: absolute;
-  display: block;
-  opacity: 0;
-  background: rgba(255, 255, 255, 0.2);
-  top: 0;
+.card {
+  background: url("../images/paper.png");
+  color: #000;
+  width: 700px;
+  height: 400px;
+  margin: auto;
+  margin-top: 10%;
+  padding: 10px 30px;
+  font-family: 'EB Garamond', serif;
+  font-variant: small-caps;
+  box-shadow: 10px 5px 5px black;
+  text-shadow: -1px -1px 1px #fff, 1px 1px 1px #888;
+}
+
+a {
+  position: relative;
+}
+
+a:hover:after{
   left: 0;
-  height: calc(100% - 20px);
-  width: calc(100% - 20px);
-  padding: 10px;
-  transition: opacity 0.5s;
+  right: 0;
 }
 
-.project-links a {
-  display: block;
-  margin: auto;
-  margin-top: 35px;
-  padding: 10px;
-  border: 1px solid white;
-  background: darkgray;
-  color: white;
-  width: 80px;
-  transition: background 0.2s;
+a:after {
+  bottom: 0;
+  content: '';
+  height: 2px;
+  background-color: #888;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transition: right 0.2s ease, left 0.2s ease;
 }
 
-.project-links a:hover{
-  background: gray;
+.header {
+  margin: 45px 0px;
 }
 
-.project-links:hover {
-  opacity: 1;
-}
-
-.project img{
-  padding: 9px;
-  border: 1px solid white;
-  width: 280px;
-  height: 180px;
-}
-
-
-
-/* Contact section style */
-section#contact {
-  background: #F6F6F6;
-}
-
-section#contact i {
-  font-size: 100px;
-  transition: color 0.2s;
-}
-
-section#contact i:hover{
-  color: #555;
-}
-
-.contact-list {
-  margin: auto;
-  width: 420px;
-}
-
-.contact-list li {
+.number {
   float: left;
-  margin: 20px;
 }
 
-#contact > h2 {
-  padding: 20px;
-  font-size: 24px;
-  font-family: 'Merriweather';
+.company {
+  margin-right: 20px;
+  float: right;
+}
+
+.name-block {
+  margin: 80px 0px;
+  text-align: center;
+}
+
+.contact {
+  font-size: 20px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.contact > * {
+  margin: 0px 2px;
 }

@@ -1,164 +1,30 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>Dean Hu</title>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900,900italic,300italic|PT+Mono|Merriweather' rel='stylesheet' type='text/css'>
     <meta charset="utf-8">
-  	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="./images/favicon.ico"/>
     <script src="./js/jquery-1.11.3.js"></script>
-    <script src="./js/navigation.js"></script>
   </head>
 
   <body>
-    <header class="nav-bar">
-      <nav class="group nav-menu">
-        <ul class="nav-list group">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-    <section id="intro" class="group">
-      <h1>Hello, I'm Dean</h1>
-      <h3>I'm a software engineer</h3>
-    </section>
-    <section id="about" class="group">
-      <h1>About Me</h1>
-      <p>
-        I'm a New York-based web developer with experience in Ruby, JavaScript,
-        HTML / CSS, RESTful APIs and MVC architecture. I love the problem
-        solving and creativity involved in programming, and I'm eager to further
-        develop my skills.
-      </p>
-      <p>
-        When I'm not coding, I love snowboarding, rock climbing, and discussions
-        about whether dinosaurs would have been kosher and if "least favorite"
-        really should mean something that's still a favorite, just... the least of
-        your favorites.
-      </p>
-    </section>
-    <section id="skills" class="group">
-      <h1>Skills and Technologies</h1>
-      <ul class="skills-list group">
-        <li><img src="./images/ruby.png"><h3>Ruby</h3></li>
-        <li><img src="./images/rails.png"><h3>Rails</h3></li>
-        <li><img src="./images/javascript.png"><h3>JavaScript</h3></li>
-        <li><img src="./images/backbone.png"><h3>Backbone</h3></li>
-        <li><img src="./images/git.png"><h3>Git</h3></li>
-      </ul>
-      <ul class="skills-list group">
-        <li><img src="./images/jquery.png"><h3>jQuery</h3></li>
-        <li><img src="./images/postgresql.png"><h3>PostgreSQL</h3></li>
-        <li><img src="./images/HTML5.png"><h3>HTML5</h3></li>
-        <li><img src="./images/css.png"><h3>CSS3</h3></li>
-        <li><img src="./images/aws.png"><h3>AWS</h3></li>
-      </ul>
-    </section>
-    <section id="projects" class="group">
-      <h1>Projects</h1>
-      <ul class="projects-list">
-        <li class="project group rendez-zoo">
-          <figure><img src="./images/rendez-zoo.png">
-            <div class="project-links">
-              <a href="http://www.rendez-zoo.co">Live</a>
-              <a href="http://www.github.com/eatmorehufu/rendez-zoo">Github</a>
-            </div>
-          </figure>
-          <div class="project-desc group">
-            <h2>Rendez-Zoo</h2>
-            <h3>An animal-themed group and event hub inspired by Meetup.com</h3>
-            <ul>
-              <li>- Omniauth allows log-in with Google accounts</li>
-              <li>- Google geocoding API sets and searches group and event locations</li>
-              <li>- Single page structure facilitates quick page navigation</li>
-              <li>- Nested associations create information rich pages</li>
-              <li>- RSpec model tests ensure database functionality</li>
-            </ul>
-          </div>
-        </li>
-        <li class="project group asteroids">
-          <figure><img src="./images/asteroids.png">
-            <div class="project-links">
-              <a href="http://eatmorehufu.github.io/asteroids">Play</a>
-              <a href="http://www.github.com/eatmorehufu/asteroids">Github</a>
-            </div>
-          </figure>
-          <div class="project-desc group">
-            <h2>Asteroids</h2>
-            <h3>A modern take on classic Asteroids gameplay</h3>
-            <ul>
-              <li>- Dynamic animated sprites with parallax background stars</li>
-              <li>- Omnidirectional shooting and movement</li>
-              <li>- Collision detection system for asteroids, bullets, and ship</li>
-              <li>- Wave based levels that scale up in difficulty</li>
-            </ul>
-          </div>
-        </li>
-        <li class="project group snake">
-          <figure><img src="./images/snake.png">
-            <div class="project-links">
-              <a href="http://eatmorehufu.github.io/snake">Play</a>
-              <a href="http://www.github.com/eatmorehufu/snake">Github</a>
-            </div></figure>
-          <div class="project-desc group">
-            <h2>Snake</h2>
-            <h3>Classic Snake gameplay with a visual twist</h3>
-            <ul>
-              <li>- Eating apples spawns Conway’s Game of Life cells</li>
-              <li>- Javascript back end with jQuery, HTML and CSS front end</li>
-              <li>- Life cell effects and snake head are drawn with CSS</li>
-            </ul>
-          </div>
-        </li>
-        <li class="project group chess">
-          <figure><img src="./images/chess.png">
-            <div class="project-links">
-              <a href="http://www.github.com/eatmorehufu/chess">Github</a>
-            </div>
-          </figure>
-          <div class="project-desc group">
-            <h2>Chess</h2>
-            <h3>A fully-featured two player chess played in terminal</h3>
-            <ul>
-              <li>- Multi-level class inheritance structure</li>
-              <li>- Move validation algorithms enable full move range including en passant</li>
-              <li>- Input hashes allow players to use coordinate notation</li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </section>
-    <section id="contact" class="group">
-      <h1>Contact Me</h1>
-      <ul class="contact-list group">
-        <li><a href="http://www.github.com/eatmorehufu"><i class="icon-github"></i></a></li>
-        <li><a href="mailto:hhu.hufu@gmail.com"><i class="icon-mail"></i></a></li>
-        <li><a href="http://www.linkedin.com/in/imdeanhu"><i class="icon-linkedin"></i></a></li>
-      </ul>
-      <h2>Or download my resume:</h2>
-      <a href="./docs/DeanHuResume.pdf"><i class="icon-profile"></i></a>
-    </section>
+    <div class="card">
+      <section class="group header">
+        <h2 class="number">347 819 8113</h2>
+        <h2 class="company"><a href="http://gust.com">Gust, LLC</a></h2>
+      </section>
+      <section class="name-block">
+        <h1><a href="http://www.linkedin.com/in/imdeanhu">Dean HU</a></h1>
+        <h2>Software Engineer</h2>
+      </section>
+      <section class="contact">
+        <span>44 West 28th St. 7th Floor New York, N.Y. 10001</span>
+        <a href="mailto:dean@gust.com">dean@gust.com</a>
+        <a href="http://github.com/eatmorehufu">Github</a>
+      </section>
+    </div>
   </body>
-  <script>
-    $(function() {
-      new Navigation.NavBar($(".nav-bar"));
-      var target = $('#about').offset().top;
-
-      var interval = setInterval(function() {
-        if ($(window).scrollTop() >= target) {
-          $('.nav-bar').addClass("opaque");
-        } else {
-          $('.nav-bar').removeClass("opaque");
-        }
-      }, 100);
-    })
-
-  </script>
-
-
 </html>
