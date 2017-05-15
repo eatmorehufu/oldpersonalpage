@@ -56,11 +56,32 @@ h3 {
   width: 700px;
   height: 400px;
   position: absolute;
+  top: calc(50% - 200px);
+  left: calc(50% - 350px);
   padding: 10px 30px;
   font-family: 'EB Garamond', serif;
   font-variant: small-caps;
-  box-shadow: 10px 5px 5px black;
+  box-shadow: 9px 2px 5px black;
   text-shadow: -1px -1px 1px #fff, 1px 1px 1px #888;
+  transition: all 1s cubic-bezier(0.68,-.55,.265,1.55);
+  perspective: 1000;
+    -ms-transform: perspective(1000px);
+    -moz-transform: perspective(1000px);
+    -ms-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+}
+
+.card.current {
+  z-index: 999;
+}
+
+.card.previous {
+  transform-origin: top left;
+  z-index: 1;
+}
+
+.previous0 {
+  transform: rotate(-9deg);
 }
 
 a {
