@@ -55,8 +55,7 @@ h3 {
   color: #000;
   width: 700px;
   height: 400px;
-  margin: auto;
-  margin-top: 10%;
+  position: absolute;
   padding: 10px 30px;
   font-family: 'EB Garamond', serif;
   font-variant: small-caps;
